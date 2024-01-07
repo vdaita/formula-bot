@@ -86,7 +86,7 @@ export default function FormulaAssistant({ type }: FormulaAssistantComponentProp
             <Box m="4">
                 {previousResults.length > 0 && <Text fontSize={'x-large'} fontWeight={'bold'}>History</Text>}
                 {previousResults.map((item, index) => (
-                    <Accordion allowToggle>
+                    <Accordion allowToggle key={index}>
                         <AccordionItem>
                             <h2>
                                 <AccordionButton>
