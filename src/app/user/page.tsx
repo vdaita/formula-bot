@@ -6,11 +6,7 @@ import Markdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-interface FormulaAssistantComponentProps {
-    type: string
-}
-
-export default function FormulaAssistant({ type }: FormulaAssistantComponentProps) {
+export default function FormulaAssistant() {
     const [query, setQuery] = useState('');
     const [software, setSoftware] = useState('excel');
     const [result, setResult] = useState('');
