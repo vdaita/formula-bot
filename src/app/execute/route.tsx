@@ -1,6 +1,8 @@
-import BRX from 'brx-node';
+import BRX from './../../brx-node';
+// import BRX from 'brx-node';
+// import { sftoq, uif } from 'brx-node';
 import { NextResponse } from 'next/server';
-import { sftoq, uif } from 'brx-node';
+import { sftoq, uif } from './../../brx-node';
 
 let brx = new BRX(process.env.BRX_API_KEY!, { verbose: true })
 
@@ -32,6 +34,9 @@ let addKeyValuePairsToInputFields = (brx_input_fields: BRXInputField[], kv_pairs
     }
     return brx_input_fields;
 }
+
+export const runtime = 'edge';
+export const dynamic = 'force-dynamic';
 
 export async function POST(request: Request){
     let body = await request.json();
